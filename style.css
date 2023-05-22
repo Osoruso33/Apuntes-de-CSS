@@ -1,0 +1,39 @@
+/* CSS */
+
+/* SINTAXIS PRINCIPAL */
+/* selector {
+    propiedad: valor;
+   /* }
+/* El selector es a lo que van dirigidas
+las propiedades que estan dentro de las llaves */
+
+/* PRINCIPALES SELECTORES */
+/* el asterisco (UNIVERSAL) sirve para decirle al sistema
+que las propiedades dentro de las llaves van a todos
+los objetos*/
+/* color es el color y en este caso puse azul */
+* {
+    color: blue;
+}
+
+/* DE TIPO es para decirle al sistema que 
+las propiedades dentro de las llaves van dirigidos
+a los elementos de ese tipo por ejemplo: h1, h2, input, a, etc... */
+h1 {
+    color: darkblue;
+}
+
+/* POR CLASE es para decirle al sistema que las propiedades
+van dirigidas a unas clases que tu vas a crear en html */
+/* SIEMPRE SE ESCRIBE UN PUNTO ANTES */
+.cositas {
+    color: rgb(3, 182, 107);
+}
+
+/* POR ID es para decirle al sistema que las propiedades
+van dirigidas a el id de un elemento*/
+/* SIEMPRE SE ESCRIBE CON HASTAG ANTES */
+#prueba {
+    color: darkcyan;
+}
+
