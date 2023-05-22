@@ -37,3 +37,28 @@ van dirigidas a el id de un elemento*/
     color: darkcyan;
 }
 
+/* POR ATRIBUTO es para decirle al sistema que las propiedades
+van dirigidas a el atributo que tu hayas creado*/
+/* SIEMPRE VA ENTRE CORCHETES */
+[verde="si"] {
+    color: green;
+}
+
+/* DESCENDIENTE es para decirle al sistema que las propiedades
+van dirigidas a todos los descendientes de un objeto */
+/* siempre de el mas grande al mas hijo */
+h3 p {
+    color: darkolivegreen
+}
+/* en este ejemplo solo cambio los p que estan
+dentro de un h3, entonces no cambio el p principal (en donde esta el lorem) */
+/* (Tambien funciona con hijos de clases */
+
+/* PSEUDO-CLASES es para decirle al sistema que las propiedades
+van dirigidas a pseudos-clases, que son clases que solo se activan en un
+evento concreto */
+h2:hover {
+    color:red !important
+}
+/* !IMPORTANT es el escalon mas alto de la especificación */
+/* Le gana a cualquier cosa */
