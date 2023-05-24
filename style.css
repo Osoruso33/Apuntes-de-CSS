@@ -14,19 +14,43 @@ los objetos*/
 /* color es el color y en este caso puse azul */
 * {
     color: blue;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* DE TIPO es para decirle al sistema que 
 las propiedades dentro de las llaves van dirigidos
 a los elementos de ese tipo por ejemplo: h1, h2, input, a, etc... */
 h1 {
-    color: darkblue;
+    color: lightblue;
+    /* margen entre cajas y bordes de la pantalla */
+    margin: 0 !important;
+    /* color del fondo de la caja */
+    background-color: darkblue;
+    /* margen entre la caja y el texto o el contenido */
+    padding: 10px;
+    border: 3px inset blue ;
+    /* sombras de caja */
+    /* ORDEN: a un ladopx hacia abajopx dispersiónpx expansiónpx (se suele dejar en 0) color */
+    box-shadow: 0px 5px 10px 0 black;
+    /* sombras de texto */
+    /* MISMO ORDEN QUE BOX SHADOW */
+    text-shadow: 1px 1px 5px aqua;
+    /* transforma la caja */
+    /* transform: rotate(10deg) */
 }
 
 /* POR CLASE es para decirle al sistema que las propiedades
 van dirigidas a unas clases que tu vas a crear en html */
 /* SIEMPRE SE ESCRIBE UN PUNTO ANTES */
 .cositas {
+    color: rgb(3, 182, 107);
+    background-color: aqua;
+    padding: 0.2em;
+    /* radio de borde de una caja (curvatura) */
+    border-radius: 1em;
+}
+
+.cositos {
     color: rgb(3, 182, 107);
 }
 
@@ -62,3 +86,19 @@ h2:hover {
 }
 /* !IMPORTANT es el escalon mas alto de la especificación */
 /* Le gana a cualquier cosa */
+
+/* PROPIEDADES DE TEXTO */
+
+#properties {
+    /* Tamaño de letra */
+    font-size: 1.6em;
+    /* Tipografia */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Interlineado */
+    line-height: 1;
+    /* Grosor de la fuente */
+    font-weight: 100;
+    /* Color de la letra */
+    color: blue;
+
+}
