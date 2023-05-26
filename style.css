@@ -28,6 +28,10 @@ h1 {
     background-color: darkblue;
     /* margen entre la caja y el texto o el contenido */
     padding: 10px;
+    /* Bordes de una caja */
+    /* tambien exista el outline pero
+    la diferencia esta en que el outline
+    no ocupa un espacio */
     border: 3px inset blue ;
     /* sombras de caja */
     /* ORDEN: a un ladopx hacia abajopx dispersiónpx expansiónpx (se suele dejar en 0) color */
@@ -37,6 +41,8 @@ h1 {
     text-shadow: 1px 1px 5px aqua;
     /* transforma la caja */
     /* transform: rotate(10deg) */
+    position: sticky;
+    top: 0;
 }
 
 /* POR CLASE es para decirle al sistema que las propiedades
@@ -48,10 +54,6 @@ van dirigidas a unas clases que tu vas a crear en html */
     padding: 0.2em;
     /* radio de borde de una caja (curvatura) */
     border-radius: 1em;
-}
-
-.cositos {
-    color: rgb(3, 182, 107);
 }
 
 /* POR ID es para decirle al sistema que las propiedades
@@ -101,4 +103,127 @@ h2:hover {
     /* Color de la letra */
     color: blue;
 
+}
+
+/* POSICIONES */
+/* position: ; */
+/* los agentes de movimiento son top y left usando numeros negativos o positivos */
+/* z-index es la propiedad para colocar en que "capa" se encuentra una caja */
+/* Hay cuatro tipo de colocar posiciones */
+/* relative: mantiene el espacio de origen
+y sus puntos de referencia son los de la cajha misma*/
+/* Absolute: no tiene espacio propio y el punto de referencia
+se basa en su contenedor padre en caso de que este posicionado
+y si no se basara en el viewport */
+/* Fixed: igual que absolute pero queda fijado al sitio */
+/* se comporta como un fixed pero empieza a seguir el viweport en un momento determindado */
+
+#Lorem_prueba {
+    font-size: 50pt;
+}
+
+/* DISPLAYS PRINCIPALES */
+/* Block: sus cajas llegan al final del viewport
+y se les puede atribuir dimensiones */
+/* inline: la caja es del tamaño de el contenido */
+/* Inline-block: son blocks a los que se les puede 
+atribuir unas dimensiones y ademas tambien van en linea */
+
+/* OVERFLOW */
+/* overflow es una propiedad que nos permite
+decidir que va a pasar con el sobrante de un block */
+/* Valores: */
+/* Visible: es la que deja que se sobresalga */
+/* Auto: nos deja scrollear en los ejes donde sea necesario */
+/* Scroll: nos deja scrollear en todos los ejes (x, y) */
+/* Hidden: esconde el scroll y el objeto que sobresalga */
+
+/* PSEUDO-ELEMENTOS */
+/* Elementos que no son elementos, se crean sobre un elemento */
+/* ::first-line: no funciona en los inline, crea los cambios en el
+primer renglon de una frase o parrafo (y first-letter es lo mismo
+pero solo con la primera letra */
+
+#Lorem_prueba::first-line {
+    color: darkgreen;
+}
+
+#Lorem_prueba::first-letter {
+    font-size: 80pt;
+}
+
+/* ::placeholder: sirve para cambiar las propiedades del atributo
+placeholder en los inputs que inpliquen texto o en los textareas */
+
+input::placeholder {
+    color:rgb(3, 182, 107);
+    font-size: 14pt;
+}
+
+/* ::selection: sirve para cambiar las propiedades del texto que 
+seleccionamos con el cursor y el click derecho */
+
+*::selection {
+    color: grey;
+    background-color: black;
+    text-shadow: none;
+}
+
+/* ::after: "Hijos" del elemento al que se le aplica, propiedad content
+necesaria, y solo para inline. Sirve para darle despues a un elemento otra
+frase, se le puede cambiar cualquier cosa, content es para poner lo que va
+a decir ese after  */
+/* ::before: exactamente lo mismo pero en ves de despues, antes */
+
+/* PSEUDO-CLASES */
+/* :hover: Sirve para cuando el cursor pase por encima */
+
+h2:hover {
+    color:red !important
+}
+
+/* :link: cambia las propiedades de el link si no ha sido visitado antes */
+
+.SoyDaltoLink:link {
+    color: blue;
+}
+
+/* :visited: es lo mismo que link pero al reves */
+
+.SoyDaltoLink:visited {
+    color: slateblue;
+}
+
+/* :active: es para cuando lo estamos pulsando mantenido */
+
+#divDeActive {
+    background: red;
+    width: 100px;
+    height: 100px;
+    margin: 40px auto;
+    transition: all 1s;
+}
+
+#divDeActive:active {
+    background: orange;
+    width: 600px;
+    height: 300px;
+}
+
+/* :focus: es para cuando un input esta enfocado */
+
+.input {
+    width: 300px;
+    height: 20px;
+    transition: all 1s;
+}
+
+.input:focus {
+    width: 600px;
+}
+
+/* :lang es una funcion para poner el estilo de cada idioma (se tiene que especificar) */
+
+p :lang(en) {
+    color: darkblue;
 }
